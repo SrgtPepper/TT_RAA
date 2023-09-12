@@ -12,12 +12,36 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-int contador = 0;
+int contadorx = 0;
+int contadory = 0;
+int contadorz = 0;
 
-//Comportamiento del btn X+
+//Comportamiento de los btns X
 void MainWindow::on_pushButton_clicked()
 {
-    contador++;
-    ui->lcdNumber->display(contador);
+    contadorx++;
+    ui->lcdNumber->display(contadorx);
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    contadorx--;
+    ui->lcdNumber->display(contadorx);
+}
+
+
+//Comportamiento de los btns Y
+void MainWindow::on_pushButton_3_clicked()
+{
+    contadory++;
+    ui->lcdNumber_2->display(contadory);
+}
+
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    contadory--;
+    ui->lcdNumber_2->display(contadory);
 }
 
