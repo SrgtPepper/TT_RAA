@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -100,32 +100,6 @@
         </property>
         <property name="text">
          <string>-Z</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_7">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>190</y>
-          <width>101</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>+Θ</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_8">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>190</y>
-          <width>101</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>-Θ</string>
         </property>
        </widget>
       </widget>
@@ -242,6 +216,71 @@
        <attribute name="title">
         <string>Operación por trayectoria</string>
        </attribute>
+       <widget class="QPushButton" name="pushButton_9">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>80</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cuadrado</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_10">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>90</y>
+          <width>80</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Triángulo</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_11">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>140</y>
+          <width>80</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Círculo</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_12">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>190</y>
+          <width>80</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Infinito</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>521</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Seleccione una trayectoria a seguir</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>
