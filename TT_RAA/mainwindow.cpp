@@ -45,3 +45,18 @@ void MainWindow::on_pushButton_4_clicked()
     ui->lcdNumber_2->display(contadory);
 }
 
+//Comportamiento de los btns Z
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    contadorz++;
+    ui->lcdNumber_3->display(contadorz);
+}
+
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    contadorz--;
+    ui->lcdNumber_3->display(contadorz);
+}
+
