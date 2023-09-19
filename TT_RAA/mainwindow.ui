@@ -6,9 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>673</width>
-    <height>388</height>
+    <width>899</width>
+    <height>559</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>899</width>
+    <height>559</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>560</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -24,113 +42,86 @@
        <attribute name="title">
         <string>Operación por posición final</string>
        </attribute>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QWidget" name="">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>40</y>
-          <width>101</width>
-          <height>41</height>
+          <x>10</x>
+          <y>10</y>
+          <width>451</width>
+          <height>261</height>
          </rect>
         </property>
-        <property name="text">
-         <string>+X</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>40</y>
-          <width>101</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>-X</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>90</y>
-          <width>101</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>+Y</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>90</y>
-          <width>101</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>-Y</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_5">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>140</y>
-          <width>101</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>+Z</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_6">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>140</y>
-          <width>101</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>-Z</string>
-        </property>
-       </widget>
-       <widget class="QLCDNumber" name="lcdNumber">
-        <property name="geometry">
-         <rect>
-          <x>360</x>
-          <y>40</y>
-          <width>91</width>
-          <height>31</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLCDNumber" name="lcdNumber_2">
-        <property name="geometry">
-         <rect>
-          <x>350</x>
-          <y>90</y>
-          <width>101</width>
-          <height>31</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLCDNumber" name="lcdNumber_3">
-        <property name="geometry">
-         <rect>
-          <x>350</x>
-          <y>150</y>
-          <width>101</width>
-          <height>31</height>
-         </rect>
-        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>11</number>
+         </property>
+         <property name="topMargin">
+          <number>34</number>
+         </property>
+         <property name="rightMargin">
+          <number>23</number>
+         </property>
+         <property name="bottomMargin">
+          <number>49</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>35</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButton">
+           <property name="text">
+            <string>+X</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="text">
+            <string>-X</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLCDNumber" name="lcdNumber"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="text">
+            <string>+Y</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="pushButton_4">
+           <property name="text">
+            <string>-Y</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLCDNumber" name="lcdNumber_2"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="pushButton_5">
+           <property name="text">
+            <string>+Z</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="text">
+            <string>-Z</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QLCDNumber" name="lcdNumber_3"/>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_3">
@@ -321,12 +312,45 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>673</width>
+     <width>899</width>
      <height>23</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuOpciones">
+    <property name="geometry">
+     <rect>
+      <x>345</x>
+      <y>111</y>
+      <width>224</width>
+      <height>132</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Opciones</string>
+    </property>
+    <addaction name="actionConfiguracion_de_paso"/>
+    <addaction name="actionConfiguracion_de_variables"/>
+    <addaction name="separator"/>
+    <addaction name="actionMostrar_animacion"/>
+   </widget>
+   <addaction name="menuOpciones"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionConfiguracion_de_paso">
+   <property name="text">
+    <string>Configuracion de paso</string>
+   </property>
+  </action>
+  <action name="actionConfiguracion_de_variables">
+   <property name="text">
+    <string>Configuracion de variables</string>
+   </property>
+  </action>
+  <action name="actionMostrar_animacion">
+   <property name="text">
+    <string>Mostrar animacion</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
