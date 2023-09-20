@@ -59,4 +59,3 @@ void MainWindow::on_pushButton_6_clicked()
     contadorz--;
     ui->lcdNumber_3->display(contadorz);
 }
-
