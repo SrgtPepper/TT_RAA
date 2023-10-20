@@ -30,6 +30,10 @@ private slots:
 
     void on_pushButton_6_clicked();
 
+    void on_actionConfiguracion_de_paso_triggered();
+
+    void on_actionMostrar_animacion_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

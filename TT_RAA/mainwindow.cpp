@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "opt1.h"
+#include "opt2.h"
+#include "opt3.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -59,3 +62,23 @@ void MainWindow::on_pushButton_6_clicked()
     contadorz--;
     ui->lcdNumber_3->display(contadorz);
 }
+
+
+//Creacion de pantallas de opciones
+
+
+void MainWindow::on_actionConfiguracion_de_paso_triggered() //Pantalla de configuracion general
+{
+    opt1 configpaso;
+    configpaso.setModal(true);
+    configpaso.exec();
+}
+
+
+void MainWindow::on_actionMostrar_animacion_triggered()     //Pantalla de animaciones
+{
+    opt3 animation;
+    animation.setModal(true);
+    animation.exec();
+}
+
