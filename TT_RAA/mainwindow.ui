@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
+    <width>1011</width>
     <height>560</height>
    </rect>
   </property>
@@ -24,7 +24,7 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>900</width>
+    <width>1500</width>
     <height>560</height>
    </size>
   </property>
@@ -35,93 +35,135 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>350</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>650</width>
+        <height>600</height>
+       </size>
+      </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
         <string>Operación por posición final</string>
        </attribute>
-       <widget class="QWidget" name="layoutWidget">
+       <widget class="QPushButton" name="pushButton">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>451</width>
-          <height>261</height>
+          <x>9</x>
+          <y>98</y>
+          <width>80</width>
+          <height>26</height>
          </rect>
         </property>
-        <layout class="QGridLayout" name="gridLayout_4">
-         <property name="leftMargin">
-          <number>11</number>
-         </property>
-         <property name="topMargin">
-          <number>34</number>
-         </property>
-         <property name="rightMargin">
-          <number>23</number>
-         </property>
-         <property name="bottomMargin">
-          <number>49</number>
-         </property>
-         <property name="horizontalSpacing">
-          <number>35</number>
-         </property>
-         <property name="verticalSpacing">
-          <number>0</number>
-         </property>
-         <item row="0" column="0">
-          <widget class="QPushButton" name="pushButton">
-           <property name="text">
-            <string>+X</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QPushButton" name="pushButton_2">
-           <property name="text">
-            <string>-X</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLCDNumber" name="lcdNumber"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QPushButton" name="pushButton_3">
-           <property name="text">
-            <string>+Y</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QPushButton" name="pushButton_4">
-           <property name="text">
-            <string>-Y</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QLCDNumber" name="lcdNumber_2"/>
-         </item>
-         <item row="2" column="0">
-          <widget class="QPushButton" name="pushButton_5">
-           <property name="text">
-            <string>+Z</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QPushButton" name="pushButton_6">
-           <property name="text">
-            <string>-Z</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="2">
-          <widget class="QLCDNumber" name="lcdNumber_3"/>
-         </item>
-        </layout>
+        <property name="text">
+         <string>+X</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>287</x>
+          <y>98</y>
+          <width>80</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>-X</string>
+        </property>
+       </widget>
+       <widget class="QLCDNumber" name="lcdNumber">
+        <property name="geometry">
+         <rect>
+          <x>565</x>
+          <y>98</y>
+          <width>64</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>219</y>
+          <width>80</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>+Y</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="geometry">
+         <rect>
+          <x>287</x>
+          <y>219</y>
+          <width>80</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>-Y</string>
+        </property>
+       </widget>
+       <widget class="QLCDNumber" name="lcdNumber_2">
+        <property name="geometry">
+         <rect>
+          <x>565</x>
+          <y>219</y>
+          <width>64</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>340</y>
+          <width>80</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>+Z</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="geometry">
+         <rect>
+          <x>287</x>
+          <y>340</y>
+          <width>80</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>-Z</string>
+        </property>
+       </widget>
+       <widget class="QLCDNumber" name="lcdNumber_3">
+        <property name="geometry">
+         <rect>
+          <x>565</x>
+          <y>340</y>
+          <width>64</width>
+          <height>23</height>
+         </rect>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_3">
@@ -131,10 +173,10 @@
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>501</width>
-          <height>331</height>
+          <x>20</x>
+          <y>20</y>
+          <width>391</width>
+          <height>411</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
@@ -150,6 +192,12 @@
            <property name="styleSheet">
             <string notr="true"/>
            </property>
+           <property name="minimum">
+            <number>-180</number>
+           </property>
+           <property name="maximum">
+            <number>180</number>
+           </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -164,6 +212,12 @@
          </item>
          <item>
           <widget class="QSlider" name="horizontalSlider_2">
+           <property name="minimum">
+            <number>-180</number>
+           </property>
+           <property name="maximum">
+            <number>180</number>
+           </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -178,6 +232,12 @@
          </item>
          <item>
           <widget class="QSlider" name="horizontalSlider_3">
+           <property name="minimum">
+            <number>-180</number>
+           </property>
+           <property name="maximum">
+            <number>180</number>
+           </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -192,12 +252,58 @@
          </item>
          <item>
           <widget class="QSlider" name="horizontalSlider_4">
+           <property name="minimum">
+            <number>-180</number>
+           </property>
+           <property name="maximum">
+            <number>180</number>
+           </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QLCDNumber" name="lcdNumber_7">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>250</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLCDNumber" name="lcdNumber_4">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>50</y>
+          <width>64</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLCDNumber" name="lcdNumber_5">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>110</y>
+          <width>64</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLCDNumber" name="lcdNumber_6">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>160</y>
+          <width>64</width>
+          <height>23</height>
+         </rect>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_2">
@@ -207,8 +313,8 @@
        <widget class="QPushButton" name="pushButton_9">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>40</y>
+          <x>15</x>
+          <y>429</y>
           <width>80</width>
           <height>26</height>
          </rect>
@@ -220,8 +326,8 @@
        <widget class="QPushButton" name="pushButton_10">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>90</y>
+          <x>15</x>
+          <y>397</y>
           <width>80</width>
           <height>26</height>
          </rect>
@@ -233,8 +339,8 @@
        <widget class="QPushButton" name="pushButton_11">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>140</y>
+          <x>15</x>
+          <y>365</y>
           <width>80</width>
           <height>26</height>
          </rect>
@@ -246,8 +352,8 @@
        <widget class="QPushButton" name="pushButton_12">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>190</y>
+          <x>15</x>
+          <y>333</y>
           <width>80</width>
           <height>26</height>
          </rect>
@@ -259,10 +365,10 @@
        <widget class="QLabel" name="label_5">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>521</width>
-          <height>21</height>
+          <x>15</x>
+          <y>9</y>
+          <width>214</width>
+          <height>18</height>
          </rect>
         </property>
         <property name="text">
@@ -272,6 +378,13 @@
       </widget>
      </widget>
     </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="text">
+       <string>Posición 0</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -279,14 +392,14 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>900</width>
+     <width>1011</width>
      <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuOpciones">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>345</x>
       <y>111</y>
       <width>177</width>
       <height>106</height>

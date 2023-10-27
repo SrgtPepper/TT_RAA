@@ -10,6 +10,8 @@ CONFIG += c++11
 
 SOURCES += \
     Dinamic.cpp \
+    InverseKinematic.cpp \
+    Kinematic.cpp \
     body.cpp \
     joint.cpp \
     main.cpp \
@@ -20,6 +22,8 @@ SOURCES += \
 
 HEADERS += \
     Dinamic.h \
+    InverseKinematic.h \
+    Kinematic.h \
     body.h \
     joint.h \
     mainwindow.h \
