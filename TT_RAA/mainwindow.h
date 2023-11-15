@@ -12,6 +12,9 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+
+    float a,b,c,d;
+
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
@@ -33,6 +36,14 @@ private slots:
     void on_actionConfiguracion_de_paso_triggered();
 
     void on_actionMostrar_animacion_triggered();
+
+    void on_horizontalSlider_sliderMoved(int position);
+
+    void on_horizontalSlider_2_sliderMoved(int position);
+
+    void on_horizontalSlider_3_sliderMoved(int position);
+
+    void on_horizontalSlider_4_sliderMoved(int position);
 
 private:
     Ui::MainWindow *ui;
