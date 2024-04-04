@@ -6,26 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1120</width>
-    <height>600</height>
+    <width>1299</width>
+    <height>714</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1119</width>
-    <height>599</height>
+    <width>1299</width>
+    <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1120</width>
-    <height>600</height>
+    <width>1366</width>
+    <height>768</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -35,7 +35,7 @@
    <string notr="true">background-color: rgb(177, 177, 177);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QTabWidget" name="pestanas">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -44,8 +44,14 @@
       <x>10</x>
       <y>10</y>
       <width>641</width>
-      <height>541</height>
+      <height>481</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="minimumSize">
      <size>
@@ -65,7 +71,7 @@
     <property name="currentIndex">
      <number>1</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="herramienta">
      <attribute name="title">
       <string>Operación por espacio de la herramienta</string>
      </attribute>
@@ -73,7 +79,7 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>70</y>
+        <y>20</y>
         <width>471</width>
         <height>361</height>
        </rect>
@@ -94,7 +100,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_2"/>
+            <widget class="QLCDNumber" name="q2_herramienta"/>
            </item>
           </layout>
          </item>
@@ -111,7 +117,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_3"/>
+            <widget class="QLCDNumber" name="q3_herramienta"/>
            </item>
           </layout>
          </item>
@@ -128,7 +134,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_13"/>
+            <widget class="QLCDNumber" name="pos_z_herramienta"/>
            </item>
           </layout>
          </item>
@@ -145,7 +151,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_11"/>
+            <widget class="QLCDNumber" name="pos_x_herramienta"/>
            </item>
           </layout>
          </item>
@@ -162,7 +168,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber"/>
+            <widget class="QLCDNumber" name="q1_herramienta"/>
            </item>
           </layout>
          </item>
@@ -179,7 +185,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_12"/>
+            <widget class="QLCDNumber" name="pos_y_herramienta"/>
            </item>
           </layout>
          </item>
@@ -188,7 +194,7 @@
        <item>
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="2" column="0">
-          <widget class="QPushButton" name="pushButton_5">
+          <widget class="QPushButton" name="zplus">
            <property name="styleSheet">
             <string notr="true">color: rgb(0, 0, 0);</string>
            </property>
@@ -198,7 +204,7 @@
           </widget>
          </item>
          <item row="0" column="0">
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="xplus">
            <property name="styleSheet">
             <string notr="true">color: rgb(0, 0, 0);</string>
            </property>
@@ -208,7 +214,7 @@
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="QPushButton" name="pushButton_3">
+          <widget class="QPushButton" name="yplus">
            <property name="styleSheet">
             <string notr="true">color: rgb(0, 0, 0);</string>
            </property>
@@ -218,7 +224,7 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="xminus">
            <property name="styleSheet">
             <string notr="true">color: rgb(0, 0, 0);</string>
            </property>
@@ -228,7 +234,7 @@
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QPushButton" name="pushButton_6">
+          <widget class="QPushButton" name="zminus">
            <property name="styleSheet">
             <string notr="true">color: rgb(0, 0, 0);</string>
            </property>
@@ -238,7 +244,7 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QPushButton" name="pushButton_4">
+          <widget class="QPushButton" name="yminus">
            <property name="styleSheet">
             <string notr="true">color: rgb(0, 0, 0);</string>
            </property>
@@ -252,7 +258,7 @@
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_3">
+    <widget class="QWidget" name="eslabon">
      <attribute name="title">
       <string>Operación por eslabón</string>
      </attribute>
@@ -260,9 +266,9 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>190</y>
+        <y>160</y>
         <width>571</width>
-        <height>301</height>
+        <height>261</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -281,15 +287,18 @@
             </widget>
            </item>
            <item>
-            <widget class="QSlider" name="horizontalSlider">
+            <widget class="QSlider" name="eslabon1">
              <property name="styleSheet">
               <string notr="true"/>
              </property>
              <property name="minimum">
-              <number>-90</number>
+              <number>0</number>
              </property>
              <property name="maximum">
-              <number>90</number>
+              <number>1023</number>
+             </property>
+             <property name="sliderPosition">
+              <number>512</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -315,12 +324,15 @@
             </widget>
            </item>
            <item>
-            <widget class="QSlider" name="horizontalSlider_2">
+            <widget class="QSlider" name="eslabon2">
              <property name="minimum">
-              <number>-90</number>
+              <number>0</number>
              </property>
              <property name="maximum">
-              <number>90</number>
+              <number>1023</number>
+             </property>
+             <property name="sliderPosition">
+              <number>512</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -346,12 +358,15 @@
             </widget>
            </item>
            <item>
-            <widget class="QSlider" name="horizontalSlider_3">
+            <widget class="QSlider" name="eslabon3">
              <property name="minimum">
-              <number>-90</number>
+              <number>0</number>
              </property>
              <property name="maximum">
-              <number>90</number>
+              <number>1023</number>
+             </property>
+             <property name="sliderPosition">
+              <number>512</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -377,12 +392,15 @@
             </widget>
            </item>
            <item>
-            <widget class="QSlider" name="horizontalSlider_4">
+            <widget class="QSlider" name="eslabon4">
              <property name="minimum">
-              <number>-90</number>
+              <number>0</number>
              </property>
              <property name="maximum">
-              <number>90</number>
+              <number>1023</number>
+             </property>
+             <property name="sliderPosition">
+              <number>512</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -399,7 +417,7 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>30</y>
+        <y>10</y>
         <width>491</width>
         <height>141</height>
        </rect>
@@ -420,7 +438,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_8"/>
+            <widget class="QLCDNumber" name="q1_eslabon"/>
            </item>
           </layout>
          </item>
@@ -437,7 +455,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_9"/>
+            <widget class="QLCDNumber" name="q2_eslabon"/>
            </item>
           </layout>
          </item>
@@ -457,7 +475,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_10">
+            <widget class="QLCDNumber" name="q3_eslabon">
              <property name="layoutDirection">
               <enum>Qt::LeftToRight</enum>
              </property>
@@ -478,7 +496,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_7"/>
+            <widget class="QLCDNumber" name="q4_eslabon"/>
            </item>
           </layout>
          </item>
@@ -499,7 +517,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_4"/>
+            <widget class="QLCDNumber" name="pos_x_eslabon"/>
            </item>
           </layout>
          </item>
@@ -516,7 +534,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_5"/>
+            <widget class="QLCDNumber" name="pos_y_eslabon"/>
            </item>
           </layout>
          </item>
@@ -536,7 +554,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLCDNumber" name="lcdNumber_6">
+            <widget class="QLCDNumber" name="pos_z_eslabon">
              <property name="layoutDirection">
               <enum>Qt::LeftToRight</enum>
              </property>
@@ -549,7 +567,7 @@
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="trayectoria">
      <attribute name="title">
       <string>Operación por trayectoria</string>
      </attribute>
@@ -637,37 +655,285 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QPushButton" name="home">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>30</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Posición 0</string>
+    </property>
+   </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>680</x>
-      <y>510</y>
-      <width>431</width>
-      <height>41</height>
+      <x>20</x>
+      <y>500</y>
+      <width>631</width>
+      <height>162</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QVBoxLayout" name="verticalLayout_30">
      <item>
-      <widget class="QCheckBox" name="checkBox">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>Modo de simulación</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_14">
+       <item>
+        <widget class="QLabel" name="label_26">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Velocidades</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_29">
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Eslabón 1</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_14"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_30">
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Eslabón 2</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_16"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <widget class="QLabel" name="label_31">
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Eslabón 3</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_17">
+             <property name="font">
+              <font>
+               <underline>false</underline>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="smallDecimalPoint">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <widget class="QLabel" name="label_32">
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Eslabón 4</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_15"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_7">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>Posición 0</string>
-       </property>
-      </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_15">
+       <item>
+        <widget class="QLabel" name="label_33">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Aceleraciones</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_16">
+           <item>
+            <widget class="QLabel" name="label_34">
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Eslabón 1</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_18"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_22">
+           <item>
+            <widget class="QLabel" name="label_35">
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Eslabón 2</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_19"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_24">
+           <item>
+            <widget class="QLabel" name="label_36">
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Eslabón 3</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_20">
+             <property name="font">
+              <font>
+               <underline>false</underline>
+               <kerning>true</kerning>
+              </font>
+             </property>
+             <property name="smallDecimalPoint">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_28">
+           <item>
+            <widget class="QLabel" name="label_37">
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="text">
+              <string>Eslabón 4</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLCDNumber" name="lcdNumber_21"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </item>
     </layout>
+   </widget>
+   <widget class="QLCDNumber" name="test1">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>120</y>
+      <width>111</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="test2">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>190</y>
+      <width>111</width>
+      <height>91</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="test3">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>290</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -675,51 +941,19 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1120</width>
+     <width>1299</width>
      <height>23</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
-   <widget class="QMenu" name="menuOpciones">
-    <property name="geometry">
-     <rect>
-      <x>345</x>
-      <y>111</y>
-      <width>150</width>
-      <height>82</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Opciones</string>
-    </property>
-    <addaction name="separator"/>
-    <addaction name="actionConfiguracion_de_paso"/>
-    <addaction name="separator"/>
-   </widget>
-   <addaction name="menuOpciones"/>
   </widget>
   <widget class="QStatusBar" name="statusbar">
    <property name="styleSheet">
     <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
   </widget>
-  <action name="actionConfiguracion_de_paso">
-   <property name="text">
-    <string>Configuracion</string>
-   </property>
-  </action>
-  <action name="actionConfiguracion_de_variables">
-   <property name="text">
-    <string>Configuracion de variables</string>
-   </property>
-  </action>
-  <action name="actionMostrar_animacion">
-   <property name="text">
-    <string>Mostrar animacion</string>
-   </property>
-  </action>
  </widget>
  <resources/>
  <connections/>

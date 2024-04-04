@@ -12,30 +12,27 @@ SOURCES += \
     Dinamic.cpp \
     InverseKinematic.cpp \
     Kinematic.cpp \
+    ax12a.cpp \
     body.cpp \
     joint.cpp \
     main.cpp \
-    mainwindow.cpp \
-    opt1.cpp \
-    opt2.cpp \
-    opt3.cpp
+    mainwindow.cpp
 
 HEADERS += \
     Dinamic.h \
     InverseKinematic.h \
     Kinematic.h \
+    ax12a.h \
     body.h \
     joint.h \
-    mainwindow.h \
-    opt1.h \
-    opt2.h \
-    opt3.h
+    mainwindow.h
 
 FORMS += \
-    mainwindow.ui \
-    opt1.ui \
-    opt2.ui \
-    opt3.ui
+    mainwindow.ui
+
+INCLUDEPATH += /home/shiza/DynamixelSDK/c++/include/dynamixel_sdk
+LIBS  += -ldxl_x64_cpp
+ -lrt
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

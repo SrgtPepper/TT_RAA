@@ -13,10 +13,10 @@ public:
     double q2;
     double q3;
     double q4;
-    double l1 = 14;
-    double l2 = 15;
-    double l3 = 13;
-    double l4 = 5;
+    double l1 = 17.22 + 15.155;
+    double l2 = 16.022;
+    double l3 = 13.457;
+    double l4 = 3;
     double px,py,pz;
 
     InverseKinematic();

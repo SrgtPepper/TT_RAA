@@ -21,29 +21,28 @@ public:
 
 private slots:
 
-    void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_eslabon1_sliderMoved(int position);
 
-    void on_pushButton_3_clicked();
+    void on_eslabon2_sliderMoved(int position);
 
-    void on_pushButton_4_clicked();
+    void on_eslabon3_sliderMoved(int position);
 
-    void on_pushButton_5_clicked();
+    void on_eslabon4_sliderMoved(int position);
 
-    void on_pushButton_6_clicked();
+    void on_xplus_clicked();
 
-    void on_actionConfiguracion_de_paso_triggered();
+    void on_xminus_clicked();
 
-    void on_actionMostrar_animacion_triggered();
+    void on_yplus_clicked();
 
-    void on_horizontalSlider_sliderMoved(int position);
+    void on_yminus_clicked();
 
-    void on_horizontalSlider_2_sliderMoved(int position);
+    void on_zplus_clicked();
 
-    void on_horizontalSlider_3_sliderMoved(int position);
+    void on_zminus_clicked();
 
-    void on_horizontalSlider_4_sliderMoved(int position);
+    void on_home_clicked();
 
 private:
     Ui::MainWindow *ui;

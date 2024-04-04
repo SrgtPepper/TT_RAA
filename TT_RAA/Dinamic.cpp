@@ -1,5 +1,4 @@
 #include "Dinamic.h"
-#include "Integrator.h"
 #include <eigen3/Eigen/Dense>
 #include <math.h>
 const double g = 9.81;
@@ -93,38 +92,6 @@ void Dinamic::Dynamic_qpp(Vector4d Tau,Vector4d q, Vector4d qp, Vector4d &qpp)
     // Ecuación de la dinamica con las aceleraciones despejadas
 
     qpp = (D.inverse())*(Tau-C*qp-Phi);
-
-    // Se integran las aceleraciones y velocidades
-    /*
-    Integrator Accel_Integrator, Speed_Integrator;
-    qp = Accel_Integrator.integral(qpp);
-    q  = Speed_Integrator.integral(qp);
-    */
-  /*// Parametros para integrar por el metodo de Euler
-    double h = 0.0001;
-    //double n = 10000;
-    double aux_previous_value1[4] = {0,0,0,0};  // Para guardar los valores previos al integrar las aceleraciones
-    double aux_previous_value2[4] = {0,0,0,0};  // para guardar los calores previos al integrar las velocidades
-    double results_qp[4] = {0,0,0,0};
-    double results_q[4] = {0,0,0,0};
-    int i, j, k;
-
-    //for(i = 0; i<n; i++){
-
-        for(j=0; j<4;j++) {
-            results_qp[j] = aux_previous_value1[j]+h*qpp(j);
-            aux_previous_value1[j] = results_qp[j];
-         }
-
-        for(k=0;k<4;k++) qp(k) = results_qp[k];
-
-        for(j=0; j<4;j++) {
-            results_q[j] = aux_previous_value2[j]+h*qp(j);
-            aux_previous_value1[j] = results_q[j];
-        }
-
-        for(k=0;k<4;k++) q(k) = results_q[k];
-    //}*/
 
 
 }
