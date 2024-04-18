@@ -31,3 +31,15 @@ void Kinematic::DirecKinect(double q1,double q2,double q3, double &px, double &p
     this -> py = py;
     this -> pz = pz;
 }
+
+void Kinematic::hitbox(double px, double py, double pz, bool &hit){
+
+    float dist_origin_xy = sqrt(px*px+py*py);
+
+    if ( dist_origin_xy <= r && pz <= h ){
+        hit = true;
+    }
+    else{
+        hit = false;
+    }
+}

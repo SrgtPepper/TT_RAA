@@ -44,6 +44,8 @@ private slots:
 
     void on_home_clicked();
 
+    void on_pestanas_tabBarClicked(int index);
+
 private:
     Ui::MainWindow *ui;
 };

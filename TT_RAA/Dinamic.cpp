@@ -1,6 +1,7 @@
 #include "Dinamic.h"
 #include <eigen3/Eigen/Dense>
-#include <math.h>
+#define _USE_MATH_DEFINES
+#include <cmath>
 const double g = 9.81;
 
 using namespace Eigen;
