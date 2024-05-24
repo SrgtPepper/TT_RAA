@@ -24,6 +24,7 @@ public:
     double h = 48;
     int r = 12;
     bool hit = false;
+    int ec = 1;
 
     InverseKinematic();
     ~InverseKinematic();

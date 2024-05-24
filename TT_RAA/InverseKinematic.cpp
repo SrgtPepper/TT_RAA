@@ -24,7 +24,7 @@ void InverseKinematic::InverseKinect(double px, double py, double pz, double &q1
     //Auxiliares para simplificar la ecuacion
     px2 = px*px;
     py2 = py*py;
-    pz2 = (l1-pz)*(l1-pz);
+    pz2 = (pz-l1)*(pz-l1);
     l4 = l2*l2;
     l9 = l3*l3;
 
@@ -41,15 +41,28 @@ void InverseKinematic::InverseKinect(double px, double py, double pz, double &q1
     c2q3 = cosq3*cosq3;
 
     //Sin(q3)
-    sinq3 = sqrt(1-c2q3);
+    sinq3 = ec*(-1*sqrt(1-c2q3));
 
     //Auxiliares alfa y beta
     alfa = atan2(l3*sinq3 , l2+(l3*cosq3));
-    beta = atan2(l1-pz, sqrt(px2 + py2));
+    beta = atan2(pz-l1, sqrt(px2 + py2));
 
-    q1 = atan2(px , py);
+    q1 = atan2(py , px);
+
+    if(q1 < -5*M_PI/6){
+        q1 = -5*M_PI/6;
+    }
+    else if (q1 > 5*M_PI/6){
+        q1 = 5*M_PI/6;
+    }
+
     q2 = beta - alfa;
     q3 = atan2(sinq3 , cosq3);
+
+    this -> q1 = q1;
+    this -> q2 = q2;
+    this -> q3 = q3;
+
 }
 
 void InverseKinematic::hitbox(double px, double py, double pz, bool &hit){

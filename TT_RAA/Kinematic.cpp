@@ -1,6 +1,6 @@
 #include "Kinematic.h"
 #include <eigen3/Eigen/Dense>
-#include <math.h>
+#include <cmath>
 #define PI 3.141594
 
 using namespace Eigen;

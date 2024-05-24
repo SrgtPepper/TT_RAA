@@ -2,7 +2,6 @@
 #define JOINT_H
 #include "body.h"
 #include <vector>
-
 using namespace std;
 
 class Body;

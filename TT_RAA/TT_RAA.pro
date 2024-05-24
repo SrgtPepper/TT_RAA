@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui opengl widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,9 +14,14 @@ SOURCES += \
     Kinematic.cpp \
     ax12a.cpp \
     body.cpp \
+    controller.cpp \
+    gl.cpp \
     joint.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    robot.cpp \
+    trajectories.cpp \
+    worldgl.cpp
 
 HEADERS += \
     Dinamic.h \
@@ -24,15 +29,21 @@ HEADERS += \
     Kinematic.h \
     ax12a.h \
     body.h \
+    controller.h \
+    gl.h \
     joint.h \
-    mainwindow.h
+    mainwindow.h \
+    robot.h \
+    trajectories.h \
+    worldgl.h
 
 FORMS += \
     mainwindow.ui
 
-INCLUDEPATH += /home/shiza/DynamixelSDK/c++/include/dynamixel_sdk
+INCLUDEPATH += /home/shiza/DynamixelSDK/c++/include/dynamixel_sdk #Se incluye el directorio de la SDK de Dynamixel
 LIBS  += -ldxl_x64_cpp
  -lrt
+ -lQt5Widgets
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
