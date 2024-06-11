@@ -63,11 +63,12 @@ protected:
                         bool sol = false);
     bool recursiveCollision(Joint *pJoint, float pCenter[3]);
 
-
+/*
     // Interface methods
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     void wheelEvent(QWheelEvent *event);
+*/
 
 private:
     GLfloat transX, transY, transZ, rotX, rotY, strength3d;

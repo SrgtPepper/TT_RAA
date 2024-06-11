@@ -15,7 +15,7 @@ public:
     double q3;
     double q4;
 
-    double l1 = 17.22 + 15.155;
+    double l1 = 17.2 + 15.155;
     double l2 = 16.022;
     double l3 = 13.457 + 3;
 
@@ -24,7 +24,7 @@ public:
     double h = 48;
     int r = 12;
     bool hit = false;
-    int ec = 1;
+    int ec = -1;
 
     InverseKinematic();
     ~InverseKinematic();

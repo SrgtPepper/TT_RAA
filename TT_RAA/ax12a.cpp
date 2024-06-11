@@ -69,6 +69,9 @@ void ax12a::setmaxgoalpos(int maximum)
 
 void ax12a::setposition(int &goalpos) //Para escribir valor de posicion deseada
   {
+    if(goalpos>1023) goalpos = 1023;
+    if(goalpos<0) goalpos = 0;
+
     dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, id, ADDR_MX_GOAL_POSITION, goalpos, &dxl_error);
   }
 

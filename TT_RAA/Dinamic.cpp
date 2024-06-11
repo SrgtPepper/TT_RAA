@@ -2,7 +2,7 @@
 #include <eigen3/Eigen/Dense>
 #define _USE_MATH_DEFINES
 #include <cmath>
-const double g = 9.81;
+
 
 using namespace Eigen;
 using namespace std;
@@ -21,8 +21,8 @@ Dinamic::~Dinamic()
 void Dinamic::Dynamic_qpp(Vector4d Tau,Vector4d q, Vector4d qp, Vector4d &qpp)
 {
 
-    q1 = q(1), q2 = q(2), q3 = q(3), q4 = q(4);
-    q1p = qp(1), q2p = qp(2), q3p = qp(3), q4p = qp(4);
+    q1 = q(0), q2 = q(1), q3 = q(2), q4 = q(3);
+    q1p = qp(0), q2p = qp(1), q3p = qp(2), q4p = qp(3);
 
     // Asignacion de las ecuaciones de cada elemento de Inercia
 
@@ -76,19 +76,19 @@ void Dinamic::Dynamic_qpp(Vector4d Tau,Vector4d q, Vector4d qp, Vector4d &qpp)
     C << C11, C12, C13, C14,
          C21, C22, C23, C24,
          C31, C32, C33, C34,
-         C41, C42, C43, C44;     
-         
-    
+         C41, C42, C43, C44;
+
+
     // Elementos del vector de pares gravitacionales
 
     Phi1 = 0;
     Phi2 = g*m4*(cos(q2 + q3)*(l3 + lc4) + l2*cos(q2)) + g*m3*(lc3*cos(q2 + q3) + l2*cos(q2)) + g*lc2*m2*cos(q2);
     Phi3 = g*m4*cos(q2 + q3)*(l3 + lc4) + g*lc3*m3*cos(q2 + q3);
     Phi4 = 0;
-           
+
     // Vector de pares gravitacionales
 
-    Phi << Phi1, Phi2, Phi3, Phi4;       
+    Phi << Phi1, Phi2, Phi3, Phi4;
 
     // Ecuación de la dinamica con las aceleraciones despejadas
 

@@ -1,4 +1,4 @@
-QT       += core gui opengl widgets
+QT       += core gui opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,9 +16,11 @@ SOURCES += \
     body.cpp \
     controller.cpp \
     gl.cpp \
+    integrator.cpp \
     joint.cpp \
     main.cpp \
     mainwindow.cpp \
+    myworker.cpp \
     robot.cpp \
     trajectories.cpp \
     worldgl.cpp
@@ -31,8 +33,10 @@ HEADERS += \
     body.h \
     controller.h \
     gl.h \
+    integrator.h \
     joint.h \
     mainwindow.h \
+    myworker.h \
     robot.h \
     trajectories.h \
     worldgl.h
@@ -40,7 +44,7 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
-INCLUDEPATH += /home/shiza/DynamixelSDK/c++/include/dynamixel_sdk #Se incluye el directorio de la SDK de Dynamixel
+INCLUDEPATH += /home/gsus/DynamixelSDK-3.7.31/c++/include/dynamixel_sdk
 LIBS  += -ldxl_x64_cpp
  -lrt
  -lQt5Widgets
@@ -49,3 +53,8 @@ LIBS  += -ldxl_x64_cpp
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    UPIIZ.png \
+    logo-ipn-guinda.png \
+    momosbot_chidisimo_sin_comas.rbt

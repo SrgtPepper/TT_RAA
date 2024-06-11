@@ -10,7 +10,7 @@ WorldGL::WorldGL(QWidget *parent)
 {
     // Con esto se modifica el viewpoint
     transX = 0.0f;
-    transY = -15.0f;
+    transY = -35.0f;
     transZ = -120.0f;
     rotX = -60.0f;
     rotY = 0.0f;
@@ -120,7 +120,6 @@ void WorldGL::setRobotConfig(vector<float> config, int robotNumber){
 
 void WorldGL::initializeGL()
 {
-//    glClearColor(255.0f , 255.0f, 255.0f, 255.0f);  // White Background
     glClearColor(0.0, 0.0, 0.0, 255.0); // Black Background
     glEnable(GL_DEPTH_TEST);
     glShadeModel(GL_SMOOTH);
@@ -133,7 +132,6 @@ void WorldGL::initializeGL()
 
     glEnable(GL_LIGHT0);
     static GLfloat lightPos[4] = { 1000.0, 1000.0, 1000.0, 0.0 };
-//    static GLfloat lightPos1[4] = { 0.0, 10.0, 1.0, 0.0 };
     static GLfloat ambientLight[] = { 0.2f, 0.2f, 0.2f, 1.0f };
     static GLfloat diffuseLight[] = { 0.8f, 0.8f, 0.8, 1.0f };
     static GLfloat specularLight[] = { 0.5f, 0.5f, 0.5f, 1.0f };
@@ -168,8 +166,6 @@ void WorldGL::paintGL()
 
     // Camera Transform
     glTranslatef(transX, transY, transZ);
-//    glRotatef(rotX, 1.0, 0.0, 0.0);
-//    glRotatef(rotY, 0.0, 1.0, 0.0);
 
     // Render twice to make anaglyph 3d
     if (enable3d){
@@ -180,8 +176,7 @@ void WorldGL::paintGL()
         glRotatef(rotX, 1.0, 0.0, 0.0);
         glRotatef(rotY, 0.0, 1.0, 0.0);
         glColorMask(GL_FALSE, GL_TRUE, GL_TRUE, GL_TRUE);
-//        glColorMask(GL_TRUE, GL_FALSE, GL_FALSE, GL_TRUE);
-        // Paint every body of environment
+
         if (!bodyVector.empty()) {
             for (vector<Body>::iterator it = bodyVector.begin(); it != bodyVector.end() ; it++){
                 paintBody(*it);
@@ -204,8 +199,7 @@ void WorldGL::paintGL()
         glRotatef(rotX, 1.0, 0.0, 0.0);
         glRotatef(rotY, 0.0, 1.0, 0.0);
         glColorMask(GL_TRUE, GL_FALSE, GL_FALSE, GL_TRUE);
-//        glColorMask(GL_FALSE, GL_TRUE, GL_TRUE, GL_TRUE);
-        // Paint every body of environment
+
         if (!bodyVector.empty()) {
             for (vector<Body>::iterator it = bodyVector.begin(); it != bodyVector.end() ; it++){
                 paintBody(*it);
@@ -249,15 +243,7 @@ void WorldGL::paintGL()
             glTranslatef(robotAux->transform.x,
                          robotAux->transform.y,
                          robotAux->transform.z);
-//            for (unsigned int j=0; j<solVector.size();j++){
-//                robotAux->setSol(solVector.at(j).jointValues);
-//                for (unsigned int i=0; i<robotAux->firstJoint.size();i++){
-//                    Joint *firstJoint;
-//                    firstJoint = robotAux->firstJoint.at(i);
-//                    float pCenter[3] = {0, 0, 0};
-//                    recursivePaint(firstJoint, pCenter, true, false, false, true);
-//                }
-//            }
+
             glPopMatrix();
         }
     }
@@ -396,6 +382,7 @@ void WorldGL::paintBody(Body pBody, bool overrideColor)
     glPopMatrix();
 }
 
+/*
 void WorldGL::mousePressEvent(QMouseEvent *event)
 {
     lastPos = event->pos();
@@ -428,6 +415,7 @@ void WorldGL::wheelEvent(QWheelEvent *event)
     setZtranslation(transZ + dz);
     updateGL();
 }
+*/
 
 bool WorldGL::checkCollisions()
 {
@@ -523,28 +511,13 @@ bool WorldGL::checkBodyCollisions(Body *pBody)
               pBody->rotation[2],
               pBody->rotation[3]);
 
-//    PQP_Model *m1, *m2;
-//    PQP_REAL R1[3][3],R2[3][3],T1[3],T2[3];
-//    Midentity(R2);
-//    Videntity(T2);
 
     GLdouble modelView[16];
     glGetDoublev(GL_MODELVIEW_MATRIX, modelView);
-//    OGLtoMV(R1,T1,modelView);
 
-//    PQP_CollideResult cRes;
-    // PQP Query
-//    m1 = pBody->bodyPQP;
     for (unsigned int i=0; i<bodyVector.size(); i++){
         bodyEnv = &(bodyVector.at(i));
-//        m2 = bodyEnv->bodyPQP;
-//        PQP_Collide(&cRes,R1,T1,m1,R2,T2,m2,PQP_FIRST_CONTACT);
-//        if (cRes.NumPairs()>0){
-//            collisionExists = true;
-//            // Mark for red paint
-//            pBody->isColliding = true;
-//            bodyEnv->isColliding = true;
-//        }
+
     }
     glPopMatrix();
     return collisionExists;
@@ -559,13 +532,4 @@ void WorldGL::resetBodyCollisionFlag()
         bodyAux->isColliding = false;
     }
 }
-
-
-//void WorldGL::setSolutionPointers(vector<Node *> newSolVector)
-//{
-//    solVector.clear();
-//    for (unsigned int i=0; i<newSolVector.size();i++){
-//        solVector.push_back(*newSolVector.at(i));
-//    }
-//}
 

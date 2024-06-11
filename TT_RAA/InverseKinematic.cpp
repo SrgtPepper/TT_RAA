@@ -18,7 +18,6 @@ InverseKinematic::~InverseKinematic()
 
 double sinq3, cosq3, alfa, beta, px2, py2, pz2, l4, l9, c2q3;
 
-
 void InverseKinematic::InverseKinect(double px, double py, double pz, double &q1, double &q2, double &q3){
 
     //Auxiliares para simplificar la ecuacion
@@ -41,21 +40,13 @@ void InverseKinematic::InverseKinect(double px, double py, double pz, double &q1
     c2q3 = cosq3*cosq3;
 
     //Sin(q3)
-    sinq3 = ec*(-1*sqrt(1-c2q3));
+    sinq3 = ec*(sqrt(1-c2q3));
 
     //Auxiliares alfa y beta
     alfa = atan2(l3*sinq3 , l2+(l3*cosq3));
     beta = atan2(pz-l1, sqrt(px2 + py2));
 
     q1 = atan2(py , px);
-
-    if(q1 < -5*M_PI/6){
-        q1 = -5*M_PI/6;
-    }
-    else if (q1 > 5*M_PI/6){
-        q1 = 5*M_PI/6;
-    }
-
     q2 = beta - alfa;
     q3 = atan2(sinq3 , cosq3);
 

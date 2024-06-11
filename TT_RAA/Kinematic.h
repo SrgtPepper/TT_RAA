@@ -5,7 +5,7 @@
 #include <eigen3/Eigen/Dense>
 #define _USE_MATH_DEFINES
 #include <cmath>
-#include "ax12a.h"
+//#include "ax12a.h"
 
 
 class Kinematic
@@ -17,7 +17,7 @@ public:
     double q3;
     double q4;
 
-    double l1 = 17.22 + 15.155;
+    double l1 = 17.2 + 15.155;
     double l2 = 16.022;
     double l3 = 13.457;
     double l4 = 3;

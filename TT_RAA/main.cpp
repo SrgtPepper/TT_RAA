@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
 
 #include <QApplication>
 
@@ -9,10 +8,5 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.setWindowTitle("Brazo robótico modelo San Carlo");
     w.show();
-
     return a.exec();
 }
-
-//This is main
-
-//Esto es un comentario 

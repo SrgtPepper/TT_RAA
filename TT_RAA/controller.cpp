@@ -8,16 +8,18 @@ Controller::~Controller() {
 }
 
 
+// Metodo del controlador proporcional con realimentacion de velocidad y compensacion de gravedad
+void Controller::PVG(Vector4d error, Vector4d qp, Vector4d Phi, Vector4d &Tau){
 
-void Controller::PVG(Vector4d desired_pos, Vector4d q, Vector4d qp, Vector4d Phi, Vector4d &Tau){
-    this->pos_error = desired_pos-q;
+    Tau = Kp*error - Kd*qp + Phi;
 
-    Tau = Kp*pos_error - Kd*qp + Phi ;
 }
+// Metodo para establecer la matriz de ganancias de posicion
 void Controller::set_kp_gains(Matrix4d kp_new)
 {
     this->Kp = kp_new;
 }
+// Metodo para establecer la matriz de ganancias de velocidad
 void Controller::set_kd_gains(Matrix4d kd_new)
 {
     this->Kd = kd_new;
