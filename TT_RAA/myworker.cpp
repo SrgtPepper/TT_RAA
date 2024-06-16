@@ -263,13 +263,13 @@ void MyWorker::doWork()
 
 
 
-    if(j>4){
+//    if(j>4){
  //       updateMotorsPosition(qGlobal);
         emit resultsReady(q1,q2,q3,q4);
-        j=0;
-    }else{
-        j++;
-    }
+//        j=0;
+//    }else{
+//        j++;
+//    }
 
     //t++;
 

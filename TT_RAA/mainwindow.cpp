@@ -13,7 +13,7 @@ ax12a m1(1);
 ax12a m2(2);
 ax12a m3(3);
 
-int speed = 255;
+int speed = 200;
 void updateMotorsPosition(Vector4d pos);
 void toObtainGraphs();
 Vector4d positions{0,0,0,0};
@@ -26,6 +26,8 @@ double t = 0;
 QElapsedTimer elapsedTimer;
 ofstream logg1("Errores_sin_control.txt");
 ofstream logg2("Errores_control.txt");
+ofstream logg3("Angulos_sin_control.txt");
+ofstream logg4("Angulos_control.txt");
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -102,7 +104,7 @@ void MainWindow::toObtainGraphs()
 {
 
     if(writing){
-        auto start = chrono::high_resolution_clock::now();
+//        auto start = chrono::high_resolution_clock::now();
         m0.getposition(), m1.getposition(), m2.getposition(), m3.getposition();
         present_q[0] = (m0.dxl_present_position*mtrToGrad-150)*gradToRad;
         present_q[1] = (m1.dxl_present_position*mtrToGrad-60)*gradToRad;
@@ -119,13 +121,15 @@ void MainWindow::toObtainGraphs()
         if(!control){
             error1 = worker->qGlobal-present_q;
             logg1 << t << " " << error1[0] << " " << error1[1] << " " << error1[2] << " " << error1[3] << endl;
+
+            logg3 << t << " " << present_q[0]/gradToRad << " " << (present_q[1]/gradToRad) - 90 << " " << present_q[2]/gradToRad << " " << present_q[3]/gradToRad << endl; //Para graficar posiciones angulares
         }else{
             error2 = worker->C->desired_pos-present_q;
             logg2 << t << " " << error2[0] << " " << error2[1] << " " << error2[2] << " " << error2[3] << endl;
         }
-        auto end = chrono::high_resolution_clock::now();
-        chrono::duration<double> duration = end-start;
-        cout << "Tiempo de ejecucion: " << duration.count() << " segundos" << endl;
+//        auto end = chrono::high_resolution_clock::now();
+//        chrono::duration<double> duration = end-start;
+//        cout << "Tiempo de ejecucion: " << duration.count() << " segundos" << endl;
     }
 
 }
