@@ -898,7 +898,7 @@
                 <string notr="true">color: rgb(0, 0, 0);</string>
                </property>
                <property name="text">
-                <string>Posiciones</string>
+                <string>Posiciones (en cm)</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -1677,7 +1677,7 @@
                 <string notr="true">color: rgb(0, 0, 0);</string>
                </property>
                <property name="text">
-                <string>Ángulos</string>
+                <string>Ángulos (en grados)</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -2455,7 +2455,7 @@
                   <string notr="true">color: rgb(0, 0, 0);</string>
                  </property>
                  <property name="text">
-                  <string>Velocidades</string>
+                  <string>Velocidades (rad/s)</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -2471,7 +2471,7 @@
                   <string notr="true">color: rgb(0, 0, 0);</string>
                  </property>
                  <property name="text">
-                  <string>Aceleraciones</string>
+                  <string>Aceleraciones (rad/s²)</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -5005,7 +5005,7 @@
      <x>0</x>
      <y>0</y>
      <width>1279</width>
-     <height>25</height>
+     <height>23</height>
     </rect>
    </property>
    <property name="styleSheet">
