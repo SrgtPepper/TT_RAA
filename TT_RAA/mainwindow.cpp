@@ -126,6 +126,7 @@ void MainWindow::toObtainGraphs()
         }else{
             error2 = worker->C->desired_pos-present_q;
             logg2 << t << " " << error2[0] << " " << error2[1] << " " << error2[2] << " " << error2[3] << endl;
+            logg4 << t << " " << present_q[0]/gradToRad << " " << (present_q[1]/gradToRad) - 90 << " " << present_q[2]/gradToRad << " " << present_q[3]/gradToRad << endl; //Para graficar posiciones angulares
         }
 //        auto end = chrono::high_resolution_clock::now();
 //        chrono::duration<double> duration = end-start;
