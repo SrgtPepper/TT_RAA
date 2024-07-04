@@ -44,6 +44,8 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
+
+
 INCLUDEPATH += /home/gsus/DynamixelSDK-3.7.31/c++/include/dynamixel_sdk
 LIBS  += -ldxl_x64_cpp
  -lrt
